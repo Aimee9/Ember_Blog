@@ -1,0 +1,36 @@
+{{#if addNewPost}}
+<h1>New Post</h1>
+    <div>
+      <form>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          {{input value=title id="title"}}
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author</label>
+          {{input value=author id="author"}}
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          {{input value=content id="content"}}
+        </div>
+
+        <div class="form-group">
+          <label for="image1">Top Image</label>
+          {{input value=image1 id="image1"}}
+        </div>
+
+        <div class="form-group">
+          <label for="image2">Bottom Image</label>
+          {{input value=image2 id="image2"}}
+        </div>
+
+        <button {{action 'save'}}>Save</button>
+      </form>
+    </div>
+{{else}}
+<button {{action 'postFormShow'}}>Add a New Post</button>
+{{/if}}
