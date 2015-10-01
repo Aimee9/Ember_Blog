@@ -1,35 +1,61 @@
 <header class = "jumbotron">
   <h1>Into the Wild(life)</h1>
 </header>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Home</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <form action="/search/results" class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" id="main-search" name="main-search" class="form-control" placeholder="Search Site">
+<div class="all">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Home</a>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div><!-- /.navbar-collapse -->
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <form action="/search/results" class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" id="main-search" name="main-search" class="form-control" placeholder="Search Site">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<!-- {{#carousel-container transition-interval=400}}
+    {{#carousel-body}}
+      {{#carousel-item}}
+        <div><img src="https://healingoceanstogether.files.wordpress.com/2011/11/berghia1.jpg"></div>
+      {{/carousel-item}}
+      {{#carousel-item}}
+        <div><img src="http://www.ryanphotographic.com/images/JPEGS/Ochotona%20princeps%20Pika,%20Mt%20Evans,%20Colorado-0019%20low%20res.jpg"></div>
+      {{/carousel-item}}
+      {{#carousel-item}}
+      <div><img src="https://s-media-cache-ak0.pinimg.com/736x/11/1e/13/111e1303057e7a6f3ce6d41985c318c7.jpg"></div>
+      {{/carousel-item}}
+    {{/carousel-body}}
+
+    {{#carousel-arrow direction="left" tagName="button"}}
+      Slide Left
+    {{/carousel-arrow}}
+    {{#carousel-arrow direction="right" tagName="button"}}
+      Slide Right
+    {{/carousel-arrow}}
+  {{/carousel-container}}
+   -->
+
+
 
 <div class="container">
   {{outlet}}
+</div>
 </div>
