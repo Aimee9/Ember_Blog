@@ -6,3 +6,12 @@
   {{post.content}}
 </p><br>
 <p><img src={{post.image2}}></p>
+
+<ul>
+  {{#each model.comments as |comment|}}
+  <li>Name:{{comment.name}}<br>
+      Comment:{{comment.note}}</li>
+      {{/each}}
+</ul>
+
+{{new-comment saveComment="saveComment" post=post}}
