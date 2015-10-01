@@ -5,12 +5,6 @@ export default Ember.Route.extend({
     return this.store.findRecord('post', params.post_id);
   },
   actions: {
-    save(params) {
-      var newPost = this.store.createRecord('post', params);
-      newPost.save();
-      this.transitionTo('index');
-    },
-
     update(post, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key] !==undefined) {
@@ -21,8 +15,13 @@ export default Ember.Route.extend({
       this.transitionTo('post', post_id);
     },
 
+    delete(post) {
+      if (confirm('Are you sure you want to delete this post?')) {
+        this.send('destroyPost', post);
+      }
+    },
+
     destroyPost(post) {
-      debugger;
       post.destroyRecord();
       this.transitionTo('index');
     }
